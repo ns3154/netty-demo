@@ -28,6 +28,7 @@ public class HttpServerHandler extends SimpleChannelInboundHandler<HttpObject> {
             response.headers().set(HttpHeaderNames.ACCEPT_CHARSET, "UTF-8");
             response.headers().set(HttpHeaderNames.CONTENT_LENGTH, byteBuf.readableBytes() + "");
             ctx.writeAndFlush(response);
+
         }
     }
 }
